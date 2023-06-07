@@ -25,8 +25,9 @@ fetch('https://customsearch.googleapis.com/customsearch/v1?' + new URLSearchPara
     q: 'chicken',
     searchType: 'image',
     num: 2
-})).then(res => res.json())
-.then(res => console.log(res))
+}))
+    .then(res => res.json())
+    .then(res => console.log(res))
 
 // Create video from images
 // Mix host video and video from images
