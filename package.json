@@ -4,11 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
+  "type": "module",
   "author": "Lourenco",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.1.4"
+    "dotenv": "^16.1.4",
+    "editly": "^0.14.2",
+    "request": "^2.88.2",
+    "request-progress": "^3.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
