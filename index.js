@@ -1,6 +1,13 @@
-require('dotenv').config();
-// Get script
+import dotenv from 'dotenv'
+import VideoGenerator from './src/VideoGenerator.js';
 
+dotenv.config()
+// Get script
+const theme = 'Biology about pigs'
+const videoGenerator = new VideoGenerator(theme);
+
+videoGenerator
+.getScript()
 // fetch("https://api.openai.com/v1/chat/completions", {
 //     method: "POST",
 //     headers: {
@@ -19,15 +26,8 @@ require('dotenv').config();
 //     .finally(res => console.log(res))
 
 // Get Images
-fetch('https://customsearch.googleapis.com/customsearch/v1?' + new URLSearchParams({
-    cx: process.env.MECHANISM_ID,
-    key: process.env.GOOGLE_KEY,
-    q: 'chicken',
-    searchType: 'image',
-    num: 2
-}))
-    .then(res => res.json())
-    .then(res => console.log(res))
+
+//downloadImage("https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/16:9/w_5803,h_3264,c_limit/RoastChicken_RECIPE_080420_37993.jpg", "./temp/roast.jpg");
 
 // Create video from images
-// Mix host video and video from images
+
