@@ -27,25 +27,25 @@ class VideoGenerator {
         }))
 
         const json = await resp.json();
+        json.items.forEach()
+        // for (let i = 0; i < this.scrip.length; i++) {
+        //     const isEven = number % 2 == 0
+        //     if (isEven) {
+        //         newScript.push(this.scrip[i])
+        //     } else {
+        //         const imageSearch = this.scrip[i].toLowerCase().replace('imgdesc:', '');
 
-        for (let i = 0; i < this.scrip.length; i++) {
-            const isEven = number % 2 == 0
-            if (isEven) {
-                newScript.push(this.scrip[i])
-            } else {
-                const imageSearch = this.scrip[i].toLowerCase().replace('imgdesc:', '');
+        //         await progress(request(imageSearch.trim()))
+        //             .on('progress', progress => console.log("progress", progress.percent))
+        //             .on('response', response => console.log("status code", response.statusCode))
+        //             .on('error', error => console.error("error", error))
+        //             .on('end', () => console.log("done"))
+        //             .pipe(fs.createWriteStream(path))
+        //     }
 
-                await progress(request(imageSearch.trim()))
-                    .on('progress', progress => console.log("progress", progress.percent))
-                    .on('response', response => console.log("status code", response.statusCode))
-                    .on('error', error => console.error("error", error))
-                    .on('end', () => console.log("done"))
-                    .pipe(fs.createWriteStream(path))
-            }
+        // }
 
-        }
-
-        this.script = newScript;
+        // this.script = newScript;
 
         return this
     };
